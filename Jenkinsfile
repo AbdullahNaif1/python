@@ -22,7 +22,7 @@ pipeline {
           }
           stage('Deploy') {
               steps {
-                  sh 'ssh 10.211.55.3 "docker pull abdullah919191/my_app:latest && docker run -d -p 80:5000 abdullah919191/my_app:latest"'
+                  sh 'ssh devops "docker pull abdullah919191/my_app:latest && docker run -d -p 80:5000 abdullah919191/my_app:latest"'
               }
           }
       }
