@@ -13,7 +13,7 @@ pipeline {
           }
           stage('Push Docker Image') {
               steps {
-                  withCredentials([usernamePassword(credentialsId: 'dockerHubCredentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                  withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                       sh 'docker login -u $USERNAME -p $PASSWORD'
                       sh 'docker tag my_app:latest abdullah919191/my_app:latest'
                       sh 'docker push abdullah919191/my_app:latest'
