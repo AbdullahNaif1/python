@@ -22,7 +22,7 @@ pipeline {
           }
           stage('Deploy') {
               steps {
-                  sh 'docker pull abdullah919191/my_app:latest && docker run -d -p 80:5000 abdullah919191/my_app:latest'
+                  sh 'docker pull abdullah919191/my_app:latest && docker run -d -p 8083:5000 abdullah919191/my_app:latest'
               }
           }
       }
