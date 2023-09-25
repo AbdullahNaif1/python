@@ -22,7 +22,7 @@ pipeline {
           }
           stage('Deploy') {
               steps {
-                  sh 'ssh -o StrictHostKeyChecking=no abdullah@10.211.55.3 docker pull abdullah919191/my_app:latest && docker run -d -p 80:5000 abdullah919191/my_app:latest'
+                  sh 'docker pull abdullah919191/my_app:latest && docker run -d -p 80:5000 abdullah919191/my_app:latest'
               }
           }
       }
